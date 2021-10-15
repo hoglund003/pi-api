@@ -4,6 +4,10 @@ from flask import Flask, jsonify, request
 
 app = Flask(__name__)
 
+@app.route('/')
+def index():
+    return "Welcome!"
+
 @app.route('/add')
 def add():
     num1 = int(request.args.get('num1'))
